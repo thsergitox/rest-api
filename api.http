@@ -1,0 +1,29 @@
+GET http://localhost:1234/movies/
+### Para una peli
+GET http://localhost:1234/movies/1
+
+
+### Para una peli con genero
+GET http://localhost:1234/movies?genre=action
+
+### Crear una pelicular
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The Dark Knight",
+    "year": 2008,
+    "director": "Chrxdistopher Nolan",
+    "duration": 152,
+    "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg", 
+    "genre": ["Action", "Crime", "Drama"]
+}
+
+### actualizar
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "title": "The Dark Knight",
+    "year": 1993
+}
